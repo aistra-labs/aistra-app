@@ -1,3 +1,10 @@
+input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus{
+        -webkit-text-fill-color: #fff;
+        -webkit-box-shadow: 0 0 0px 0px #000 inset;
+        transition: background-color 5000s ease-in-out 0s;
+      }
 .header-tabs{
     column-gap: 16px;
     .header-tab{
@@ -46,7 +53,8 @@
                         border: 1px solid grey;
                         color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
                         &:focus{
-                            border: grey;
+                            border: solid 1px grey;
+                            outline: none;
                         }
                     }
                 }
