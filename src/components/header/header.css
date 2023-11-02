@@ -25,3 +25,37 @@
     top: 0px;
     right: 0px;
 }
+.modal-dialog{
+    display: flex;
+    justify-content: center;
+    .modal-content{
+        width: 340px;
+        border: 1px solid #161B26;
+        background: #0E1118;
+        color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
+        .modal-body{
+            .form-container{
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                .form-field{
+                    display: flex;
+                    flex-direction: column;
+                    .form-field-input{
+                        background: none;
+                        border: 1px solid grey;
+                        color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
+                        &:focus{
+                            border: grey;
+                        }
+                    }
+                }
+            }
+        }
+        .modal-footer{
+            border-top: none;
+            display: flex;
+            justify-content: left;
+        }
+    }
+}
