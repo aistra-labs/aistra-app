@@ -14,3 +14,14 @@
         }
     }
 }
+.form-overlay{
+    position: relative;
+}
+.tooltip-arrow::before{
+    display: none;
+}
+.popover-container{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
