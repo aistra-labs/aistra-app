@@ -85,6 +85,7 @@ const Header = props => {
 
     const [show, setShow] = useState(false);
     const buttonRef = useRef(null);
+    const target = useRef(null);
 
     return (
         <>
@@ -125,7 +126,7 @@ const Header = props => {
                         <div className='ms-5'>
                             <div className="btn btn-outline-warning g-btn" role="button" onClick={handleCareersClick} >Careers</div>
                             <div ref={buttonRef} className="btn btn-primary g-btn ms-4 form-overlay" role="button" >
-                                <OverlayTrigger
+                                {/* <OverlayTrigger
                                     // show={showPopover}
                                     trigger='click'
                                     placement='left'
@@ -136,8 +137,8 @@ const Header = props => {
                                     <Button variant='primary' onClick={handleGetStartedClick}>
                                         Get Started
                                     </Button>
-                                </OverlayTrigger>
-                                {/* <Button ref={target} onClick={() => setShow(!show)}>
+                                </OverlayTrigger> */}
+                                <Button ref={target} onClick={() => setShow(!show)}>
                                     Get Started
                                 </Button>
                                 <Overlay target={target.current} show={show} placement="left">
@@ -171,7 +172,7 @@ const Header = props => {
                                             </Popover>
                                         </Tooltip>
                                     )}
-                                </Overlay> */}
+                                </Overlay>
                             </div>
                         </div>
                     </div>
