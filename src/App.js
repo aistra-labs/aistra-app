@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/footer';
 import About from './pages/about';
 import Home from './pages/home';
