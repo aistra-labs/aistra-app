@@ -162,7 +162,7 @@ const About = ({ refs: ref }) => {
         <div ref={ref} className="about-container">
             <div className="about-body">
                 <div className="about-image-container">
-                    <img className="about-image" src={images['about-img.png']} alt="About image" />
+                    <img className="about-image" src={images['about-img-2.jpeg']} alt="About image" />
                 </div>
                 <div className="about-content">
                     <div className="about-header">Who We Are</div>

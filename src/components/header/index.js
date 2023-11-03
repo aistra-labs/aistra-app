@@ -198,7 +198,7 @@ const Header = props => {
     return (
         <>
             <nav
-                className={isScrolled ? 'navbar fixed-top navbar-expand-lg navbar-dark p-0 bg-dark shadow' : 'navbar fixed-top navbar-expand-lg navbar-dark p-0'}>
+                className='navbar fixed-top navbar-expand-lg navbar-dark p-0 bg-dark shadow'>
                 <div className="container">
                     <a className="navbar-brand p-0">
                         <img src={images['aistra-labs-logo.svg']} alt="Logo Image" className="my-brand" width="120" height="120" />
@@ -298,9 +298,9 @@ const Header = props => {
                                     <Button variant="secondary" onClick={handleClose}>
                                         Close
                                     </Button>
-                                    <Button variant="secondary" onClick={handleSendClick} disabled={!isFormValid}>
+                                    {!apiData && <Button variant="secondary" onClick={handleSendClick} disabled={!isFormValid}>
                                         Send
-                                    </Button>
+                                    </Button>}
                                 </Modal.Footer>
                             </Modal>
                         </div>

@@ -23,7 +23,7 @@ const Careers = ({refs:ref}) => {
             </div>
         </div>
         <div className="careers-image-container">
-            <img className="careers-img" src={images['careers-img.png']} alt="Careers" />
+            <img className="careers-img" src={images['careers-img-2.jpeg']} alt="Careers" />
         </div>
     </div>
   );
