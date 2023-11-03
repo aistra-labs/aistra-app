@@ -4,7 +4,6 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 80px;
-    margin-top: 90px;
   .home-title {
     color: var(--foundation-blue-new-blue-new-50, #e7eaf2);
     font-family: Lato;
@@ -16,6 +15,7 @@
   .home-image-container{
     width: 536.25px;
     height: 620px;
+    margin-top: 90px;
     .home-img{
         width: 100%;
         height: 100%;
@@ -30,6 +30,7 @@
         height: auto;
         padding: 40px 26px;
         row-gap: 40px;
+        margin-top: 90px;
         .home-content{
             .home-title{
                 font-size: 40px;
@@ -39,6 +40,7 @@
         .home-image-container{
             width: 360px;
             height: 360px;
+            margin-top: 0px;
         }
     }
 }
