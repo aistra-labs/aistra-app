@@ -193,7 +193,7 @@ const Header = props => {
                                 Get Started
                             </div>
                             <Modal show={show} onHide={handleClose}>
-                                <Modal.Header closeButton>
+                                <Modal.Header>
                                     <Modal.Title>Contact Us</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>

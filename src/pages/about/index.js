@@ -139,7 +139,7 @@ const About = ({ refs: ref }) => {
                         <img className="about-btn-image" src={images['talk-to-us-btn.svg']} alt="About button" />
                     </div>
                     <Modal show={show} onHide={handleClose}>
-                        <Modal.Header closeButton>
+                        <Modal.Header>
                             <Modal.Title>Contact Us</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>

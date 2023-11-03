@@ -140,7 +140,7 @@ const Footer = props => {
                             <div onClick={handleTeamClick} className="link-text">Team</div>
                             <div className="link-text" onClick={handleShow}>Get in touch</div>
                             <Modal show={show} onHide={handleClose}>
-                                <Modal.Header closeButton>
+                                <Modal.Header>
                                     <Modal.Title>Contact Us</Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
