@@ -57,6 +57,14 @@ input:-webkit-autofill,
                             outline: none;
                         }
                     }
+                    .error-message{
+                        color: var(--foundation-blue-new-blue-new-100, #B4BFD6);
+                        font-family: Open Sans;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 180%;
+                    }
                 }
             }
         }

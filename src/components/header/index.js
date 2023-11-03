@@ -14,11 +14,55 @@ const Header = props => {
     const [apiData, setApiData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [isNameValid, setNameValid] = useState(false);
+    const [isPhoneValid, setPhoneValid] = useState(false);
+    const [isEmailValid, setEmailValid] = useState(false);
+    const [isMessageValid, setMessageValid] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => {
         setShow(true);
     }
+
+    const isFormValid = isNameValid && isPhoneValid && isEmailValid && isMessageValid;
+
+    const handleNameChange = (e) => {
+        const value = e.target.value;
+        setName(value);
+        // Add your name validation logic here
+        const isValid = value.trim() !== ""; // Example: Name is required
+        setNameValid(isValid);
+    };
+
+    const PHONE_REGEX = /^[0-9]{10}$/;
+
+    const handlePhoneChange = (e) => {
+        const value = e.target.value;
+        setPhone(value);
+
+        // Phone number validation
+        const isValid = PHONE_REGEX.test(value);
+        setPhoneValid(isValid);
+    };
+
+    const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+    const handleEmailChange = (e) => {
+        const value = e.target.value;
+        setEmail(value);
+
+        // Email validation
+        const isValid = EMAIL_REGEX.test(value);
+        setEmailValid(isValid);
+    };
+
+    const handleMessageChange = (e) => {
+        const value = e.target.value;
+        setMessage(value);
+        // Add your message validation logic here
+        const isValid = value.trim() !== ""; // Example: Message is required
+        setMessageValid(isValid);
+    };
 
     let myHeaders = new Headers();
     myHeaders.append("authority", "contact.apps-api.instantpage.secureserver.net");
@@ -206,8 +250,9 @@ const Header = props => {
                                                 id="name"
                                                 placeholder="Enter your name"
                                                 value={name}
-                                                onChange={(e) => setName(e.target.value)}
+                                                onChange={handleNameChange}
                                             />
+                                            {!isNameValid && <div className="error-message">*Name is required</div>}
                                         </div>
                                         <div className="form-group form-field">
                                             <label htmlFor="phone">Phone</label>
@@ -217,8 +262,10 @@ const Header = props => {
                                                 className="form-field-input"
                                                 placeholder="+1-555-55555"
                                                 value={phone}
-                                                onChange={(e) => setPhone(e.target.value)}
+                                                onChange={handlePhoneChange}
                                             />
+                                            {!phone.length && <div className="error-message">*Phone number is reuired</div>}
+                                            {(!isPhoneValid && phone.length > 0) && <div className="error-message">*Phone number is invalid</div>}
                                         </div>
                                         <div className="form-group form-field">
                                             <label htmlFor="email">Email</label>
@@ -228,8 +275,10 @@ const Header = props => {
                                                 className="form-field-input"
                                                 placeholder="john.doe@example.com"
                                                 value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
+                                                onChange={handleEmailChange}
                                             />
+                                            {!email.length && <div className="error-message">*Email is required</div>}
+                                            {(!isEmailValid && email.length > 0) && <div className="error-message">*Email is invalid</div>}
                                         </div>
                                         <div className="form-group form-field">
                                             <label htmlFor="message">How can we help you?</label>
@@ -239,8 +288,9 @@ const Header = props => {
                                                 placeholder=""
                                                 rows="4"
                                                 value={message}
-                                                onChange={(e) => setMessage(e.target.value)}
+                                                onChange={handleMessageChange}
                                             />
+                                            {!isMessageValid && <div className="error-message">*Message is required</div>}
                                         </div>
                                     </form> : <div>Thank You</div>}
                                 </Modal.Body>
@@ -248,7 +298,7 @@ const Header = props => {
                                     <Button variant="secondary" onClick={handleClose}>
                                         Close
                                     </Button>
-                                    <Button variant="secondary" onClick={handleSendClick}>
+                                    <Button variant="secondary" onClick={handleSendClick} disabled={!isFormValid}>
                                         Send
                                     </Button>
                                 </Modal.Footer>
