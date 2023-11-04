@@ -43,6 +43,7 @@
                 align-items: baseline;
                 .link-text{
                     cursor: pointer;
+                    text-decoration: none;
                     color: var(--foundation-blue-new-blue-new-100, #B4BFD6);
                     font-family: Open Sans;
                     font-size: 14px;

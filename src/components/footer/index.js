@@ -309,10 +309,12 @@ const Footer = (props) => {
               <div onClick={handleCareersClick} className="link-text">
                 Careers
               </div>
-                <div className="link-text">
-                  Privacy Policy
-                </div>
-              <div className="link-text">Terms and Conditions</div>
+              <a href="https://aistra.com/privacypolicy/" target="_blank" className="link-text">
+                Privacy Policy
+              </a>
+              <a href="https://aistra.com/termsandcondition/" target="_blank" className="link-text">
+                Terms and Conditions
+              </a>
             </div>
           </div>
         </div>
