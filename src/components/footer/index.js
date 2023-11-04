@@ -309,7 +309,9 @@ const Footer = (props) => {
               <div onClick={handleCareersClick} className="link-text">
                 Careers
               </div>
-              <div className="link-text">Privacy Policy</div>
+                <div className="link-text">
+                  Privacy Policy
+                </div>
               <div className="link-text">Terms and Conditions</div>
             </div>
           </div>

@@ -68,7 +68,7 @@ const Team = ({refs:ref}) => {
         },
         {
             name: "Merrick Ferro",
-            designation: "Consultant",
+            designation: "Vice President",
             imageUrl: images['merric-pic.png'],
             linkedinUrl: "https://www.linkedin.com/in/merrickferro/"
         },

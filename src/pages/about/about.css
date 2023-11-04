@@ -67,6 +67,7 @@
         .about-body{
             flex-direction: column;
             align-items: center;
+                flex-direction: column-reverse;
             .about-image-container{
                 width: 360px;
                 height: 360px;
