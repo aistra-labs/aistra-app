@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/footer'
 import Header from './components/header';
 import ScrollToAnchor from './scrollToAnchor';
+import TermsCondition from './components/termsCondition';
 
 const Default = lazy(() => import('./pages/default'));
 const PrivacyPolicy = lazy(() => import('./components/privacyPolicy'));
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Default />} />
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="/termsandcondition" element={<TermsCondition />} />
           </Routes>
           <Footer />
         </Suspense>

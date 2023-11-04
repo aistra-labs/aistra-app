@@ -158,8 +158,8 @@ const Header = props => {
             <nav
                 className='navbar fixed-top navbar-expand-lg navbar-dark p-0 bg-dark shadow'>
                 <div className="container">
-                    <a className="navbar-brand p-0">
-                        <img src={images['aistra-labs-logo.svg']} alt="Logo Image" className="my-brand" width="120" height="120" />
+                    <a href="/" className="navbar-brand p-0">
+                        <img src={images['aistra-labs-logo.svg']} alt="aistra logo" className="my-brand" width="120" height="120" />
                     </a>
                     <button
                         className="navbar-toggler"

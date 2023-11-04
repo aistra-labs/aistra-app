@@ -312,7 +312,7 @@ const Footer = (props) => {
               <a href="/privacypolicy" className="link-text">
                 Privacy Policy
               </a>
-              <a href="https://aistra.com/termsandcondition/" target="_blank" className="link-text">
+              <a href="/termsandcondition" className="link-text">
                 Terms and Conditions
               </a>
             </div>
