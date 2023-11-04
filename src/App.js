@@ -1,13 +1,16 @@
-import React, { useRef } from 'react';
-import './App.css';
+import React, { useRef, Suspense, lazy } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from './components/footer';
-import About from './pages/about';
-import Home from './pages/home';
-import Products from './pages/products';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/footer'
 import Header from './components/header';
-import Team from './pages/team';
-import Careers from './pages/careers';
+
+const Default = lazy(() => import('./pages/default'));
+const PrivacyPolicy = lazy(() => import('./components/privacyPolicy'));
 
 function App() {
   const refHome = useRef();
@@ -18,13 +21,18 @@ function App() {
 
   return (
     <div className="App">
-      <Header refHome={refHome} refAbout={refAbout} refProduct={refProduct} refTeam={refTeam} refCareers={refCareers} />
-      <Home refs={refHome} />
-      <About refs={refAbout} />
-      <Products refs={refProduct} />
-      <Team refs={refTeam} />
-      <Careers refs={refCareers} />
-      <Footer refAbout={refAbout} refTeam={refTeam} refCareers={refCareers} />
+      <Router>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Header refHome={refHome} refAbout={refAbout} refProduct={refProduct} refTeam={refTeam} refCareers={refCareers} />
+          <Routes>
+            <Route path="/" element={
+              <Default refHome={refHome} refAbout={refAbout} refProduct={refProduct} refTeam={refTeam} refCareers={refCareers} />
+            } />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          </Routes>
+          <Footer refAbout={refAbout} refTeam={refTeam} refCareers={refCareers} />
+        </Suspense>
+      </Router>
     </div>
   );
 }
