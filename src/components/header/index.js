@@ -1,19 +1,15 @@
-import React, { memo, useEffect, useRef, useState } from "react"
-import { OverlayTrigger, Popover, Button, Overlay, Tooltip, Modal } from 'react-bootstrap';
+import React, { memo, useState } from "react"
+import { Button, Modal } from 'react-bootstrap';
 import "./header.css"
 import { images } from "../images"
 
 const Header = props => {
-    const { refHome, refAbout, refProduct, refTeam, refCareers } = props;
-    const [isScrolled, setIsScrolled] = useState(false);
     const [show, setShow] = useState(false);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [apiData, setApiData] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
     const [isNameValid, setNameValid] = useState(false);
     const [isPhoneValid, setPhoneValid] = useState(false);
     const [isEmailValid, setEmailValid] = useState(false);
@@ -149,51 +145,13 @@ const Header = props => {
                 }
                 const jsonData = await response.json();
                 setApiData(jsonData);
-                setLoading(false);
                 console.log('result...', jsonData)
             } catch (err) {
-                setError(err);
-                setLoading(false);
             }
         }
         fetchData();
     };
 
-    const handleHomeClick = () => {
-        refHome.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    const handleAboutClick = () => {
-        refAbout.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    const handleProductClick = () => {
-        refProduct.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    const handleTeamClick = () => {
-        refTeam.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    const handleCareersClick = () => {
-        refCareers.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     return (
         <>
@@ -219,20 +177,20 @@ const Header = props => {
                         <div className="mx-auto"></div>
                         <ul className="navbar-nav align-items-center header-tabs">
                             <li className="nav-item">
-                                <div className="nav-link header-tab" onClick={handleHomeClick}>Home</div>
+                                <a className="nav-link header-tab" href="/#">Home</a>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link header-tab" onClick={handleAboutClick}>About</div>
+                                <a className="nav-link header-tab" href="/#about">About</a>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link header-tab" onClick={handleProductClick}>Products</div>
+                                <a className="nav-link header-tab" href="/#products">Products</a>
                             </li>
                             <li className="nav-item">
-                                <div className="nav-link header-tab" onClick={handleTeamClick}>Team</div>
+                                <a className="nav-link header-tab" href="/#team">Team</a>
                             </li>
                         </ul>
                         <div className='ms-5'>
-                            <div className="btn btn-outline-warning g-btn" role="button" onClick={handleCareersClick} >Careers</div>
+                            <a className="btn btn-outline-warning g-btn" href="/#careers">Careers</a>
                             <div className="btn btn-primary g-btn ms-4 form-overlay" role="button" onClick={handleShow} >
                                 Get Started
                             </div>

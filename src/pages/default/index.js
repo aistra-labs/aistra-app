@@ -5,15 +5,15 @@ import Products from '../products';
 import Team from '../team';
 import Careers from '../careers';
 
-function LandingPage({ refHome, refAbout, refProduct, refTeam, refCareers }) {
+function LandingPage() {
 
     return (
         <div className="App">
-            <Home refs={refHome} />
-            <About refs={refAbout} />
-            <Products refs={refProduct} />
-            <Team refs={refTeam} />
-            <Careers refs={refCareers} />
+            <Home />
+            <About />
+            <Products />
+            <Team />
+            <Careers />
         </div>
     );
 }

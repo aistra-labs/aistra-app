@@ -1,17 +1,15 @@
-import React, { memo, useEffect, useRef, useState } from "react";
+import React, { memo, useState } from "react";
 import "./about.css";
 import { images } from "../../components/images";
 import { Button, Modal } from "react-bootstrap";
 
-const About = ({ refs: ref }) => {
+const About = () => {
     const [show, setShow] = useState(false);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [apiData, setApiData] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
 
   const [isNameValid, setNameValid] = useState(false);
   const [isPhoneValid, setPhoneValid] = useState(false);
@@ -148,21 +146,17 @@ const About = ({ refs: ref }) => {
                 }
                 const jsonData = await response.json();
                 setApiData(jsonData);
-                setLoading(false);
                 console.log('result...', jsonData)
-            } catch (err) {
-                setError(err);
-                setLoading(false);
-            }
+            } catch (err) {}
         }
         fetchData();
     };
 
     return (
-        <div ref={ref} className="about-container">
+        <section id="about" className="about-container">
             <div className="about-body">
                 <div className="about-image-container">
-                    <img className="about-image" src={images['about-img-2.jpeg']} alt="About image" />
+                    <img className="about-image" src={images['about-img-2.jpeg']} alt="about" />
                 </div>
                 <div className="about-content">
                     <div className="about-header">Who We Are</div>
@@ -252,7 +246,7 @@ const About = ({ refs: ref }) => {
                     </Modal>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

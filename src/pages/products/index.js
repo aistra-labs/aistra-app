@@ -3,7 +3,7 @@ import "./products.css";
 import { images }from "../../components/images";
 import ProductCard from "../../components/productCard";
 
-const Products = ({refs:ref}) => {
+const Products = () => {
 
     const cardData = [
         {
@@ -37,7 +37,7 @@ const Products = ({refs:ref}) => {
     ];
 
     return (
-        <div ref={ref} className="products-container">
+        <section id="products" className="products-container">
             <div className="products-header">
                 Products & Solutions
             </div>
@@ -55,7 +55,7 @@ const Products = ({refs:ref}) => {
                     )
                 })}
             </div>
-        </div>
+        </section>
     );
 };
 

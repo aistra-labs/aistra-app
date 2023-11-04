@@ -3,7 +3,7 @@ import "./team.css";
 import { images }from "../../components/images";
 import TeamCard from "../../components/teamCard";
 
-const Team = ({refs:ref}) => {
+const Team = () => {
 
     const cardData = [
         {
@@ -111,7 +111,7 @@ const Team = ({refs:ref}) => {
     ];
 
     return (
-        <div ref={ref} className="team-container">
+        <section id="team" className="team-container">
             <div className="team-header">
                 Team
             </div>
@@ -128,7 +128,7 @@ const Team = ({refs:ref}) => {
                     )
                 })}
             </div>
-        </div>
+        </section>
     );
 };
 
