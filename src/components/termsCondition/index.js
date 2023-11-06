@@ -4,12 +4,12 @@ import { data } from './data';
 function TermsCondition() {
   return (
     <div className="privacy-container">
-      <h1>Terms and Conditions for Aistra</h1>
-      <p>Last updated: September 21st, 2023</p>
+      <h1 className="terms-main-title">Terms and Conditions for Aistra</h1>
+      <p className="terms-desc">Last updated: September 21st, 2023</p>
       {data.map(el => {
         return (
           <>
-            <h2>{el?.['title']}</h2>
+            <h2 className="terms-subHeading">{el?.['title']}</h2>
             <br />
             <div dangerouslySetInnerHTML={{ __html: el?.['content'] }} />
           </>

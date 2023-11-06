@@ -197,12 +197,12 @@ const Footer = (props) => {
           <div className="footer-content">
             <div className="footer-header">Company</div>
             <div className="footer-links" style={{ display: "flex" }}>
-              <div onClick={handleAboutClick} className="link-text">
+              <a href="/#about" className="link-text">
                 About us
-              </div>
-              <div onClick={handleTeamClick} className="link-text">
+              </a>
+              <a href="/#team" className="link-text">
                 Team
-              </div>
+              </a>
               <div className="link-text" onClick={handleShow}>
                 Get in touch
               </div>
@@ -306,9 +306,9 @@ const Footer = (props) => {
           <div className="footer-content">
             <div className="footer-header">Useful Links</div>
             <div className="footer-links" style={{ display: "flex" }}>
-              <div onClick={handleCareersClick} className="link-text">
+              <a href="/#careers" className="link-text">
                 Careers
-              </div>
+              </a>
               <a href="/privacypolicy" className="link-text">
                 Privacy Policy
               </a>

@@ -9,7 +9,7 @@ const Careers = ({refs:ref}) => {
     };
 
   return (
-    <div ref={ref} className="careers-container">
+    <section id="careers" className="careers-container">
         <div className="careers-content">
             <div className="careers-badge">
                 Careers
@@ -25,7 +25,7 @@ const Careers = ({refs:ref}) => {
         <div className="careers-image-container">
             <img className="careers-img" src={images['careers-img-2.jpeg']} alt="Careers" />
         </div>
-    </div>
+    </section>
   );
 };
 

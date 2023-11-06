@@ -4,11 +4,28 @@ body {
   height: 100%;
 }
 .privacy-container {
-  background-color: black;
-  color: aliceblue;
+  background: #000;
+  color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px 70px;
   margin-top: 120px;
+
+  .terms-main-title{
+    color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
+    font-family: Lato;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+  .terms-subHeading{
+    font-family: Lato;
+    color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
 
   h1 {
     color: var(--foundation-blue-new-blue-new-50, #e7eaf2);
@@ -21,6 +38,7 @@ body {
   }
   h2,
   h3 {
+    color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
     font-family: "Lato", sans-serif;
     font-style: normal;
   }
@@ -28,7 +46,7 @@ body {
     text-decoration: none;
   }
   p {
-    color: var(--foundation-blue-new-blue-new-100, #b4bfd6);
+    color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
     font-family: Open Sans;
     font-size: 16px;
     font-style: normal;
