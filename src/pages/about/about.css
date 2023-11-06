@@ -73,6 +73,7 @@
             }
             .about-content{
                 width: auto;
+                padding: 40px 26px;
                 .about-desc{
                     width: auto;
                     margin-top: 20px;

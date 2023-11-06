@@ -6,9 +6,7 @@ const ProductCard = ({ imageUrl, header, description, knowMore, style }) => {
     <div className="product-card-container">
       <div className="card-body">
         <div className="image-container">
-          <div className={`${style}`}>
-            <img src={imageUrl} alt={header} className="card-image" />
-          </div>
+          <img src={imageUrl} alt={header} className="card-image" />
         </div>
         <div className="card-content">
           <h2 className="card-header">{header}</h2>

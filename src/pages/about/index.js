@@ -156,7 +156,7 @@ const About = () => {
         <section id="about" className="about-container">
             <div className="about-body">
                 <div className="about-image-container">
-                    <img className="about-image" src={images['about-img-2.jpeg']} alt="about" />
+                    <img className="about-image" src={images['about-img.png']} alt="about" />
                 </div>
                 <div className="about-content">
                     <div className="about-header">Who We Are</div>

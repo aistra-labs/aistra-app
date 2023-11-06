@@ -9,13 +9,13 @@ const Products = () => {
         {
           header: "UnconstrainED",
           description: "Platform enabling K-12 teachers worldwide to get AI savvy, enhance productivity using AI tools, ensure ethical and compliant usage within the education community, and amplify creativity and personalization within the classroom.",
-          imageUrl: images['unconstrained-logo-new.png'],
+          imageUrl: images['unconstrained-logo-2.svg'],
           knowMore: "https://unconstrained.work/",
           style: 'image1'
         },
         {
           header: "DeepTalk",
-          description: "Scalable and industry-specific Conversational AI enabling 50% or higher productivity improvement, 24x7 responsiveness, top-notch response quality, and multilingual capability for customer care and customer success.",
+          description: "Scalable and industry-specific Conversational AI enabling 50% or higher productivity improvement, 24x7 responsiveness, top-notch response quality, and multilingual capability for customer care and success.",
           imageUrl: images['deeptalk-logo-2.svg'],
           knowMore: "",
           style: 'image2'
