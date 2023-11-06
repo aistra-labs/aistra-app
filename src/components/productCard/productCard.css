@@ -54,7 +54,7 @@
       .card-header {
         color: var(--foundation-blue-new-blue-new-50, #e7eaf2);
         font-family: Lato;
-        font-size: 20px;
+        font-size: 1.5rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -64,7 +64,7 @@
         margin-top: 16px;
         color: var(--foundation-blue-new-blue-new-100, #b4bfd6);
         font-family: Open Sans;
-        font-size: 16px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: 180%;
@@ -74,7 +74,7 @@
         margin-top: 24px;
         color: var(--foundation-orange-orange-500, #ffb248);
         font-family: Open Sans;
-        font-size: 14px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 500;
         line-height: 160%;

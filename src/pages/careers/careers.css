@@ -19,7 +19,7 @@
             border: 1px solid var(--foundation-blue-new-blue-new-50, #E7EAF2);
             color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
             font-family: Lato;
-            font-size: 16px;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -29,7 +29,7 @@
             margin-top: 48px;
             color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
             font-family: Lato;
-            font-size: 48px;
+            font-size: 3rem;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
@@ -40,7 +40,7 @@
             text-align: left;
             color: var(--foundation-blue-new-blue-new-100, #B4BFD6);
             font-family: Open Sans;
-            font-size: 16px;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 400;
             line-height: 180%;

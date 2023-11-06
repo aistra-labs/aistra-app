@@ -189,9 +189,9 @@ const Header = props => {
                                 <a className="nav-link header-tab" href="/#team">Team</a>
                             </li>
                         </ul>
-                        <div className='ms-5'>
-                            <a className="btn btn-outline-warning g-btn" href="/#careers">Careers</a>
-                            <div className="btn btn-primary g-btn ms-4 form-overlay" role="button" onClick={handleShow} >
+                        <div className='ms-5 footer-mobile-btn'>
+                            <a className="btn btn-outline-warning g-btn header-btn" href="/#careers">Careers</a>
+                            <div className="btn btn-primary g-btn ms-4 form-overlay header-btn get-started-btn" role="button" onClick={handleShow} >
                                 Get Started
                             </div>
                             <Modal show={show} onHide={handleClose}>

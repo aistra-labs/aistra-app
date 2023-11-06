@@ -19,14 +19,13 @@
         .about-content{
             display: flex;
             flex-direction: column;
-            row-gap: 14px;
             background: #0E1118;
             padding: 39px 64px;
             .about-header{
                 color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
                 font-family: Lato;
                 text-align: left;
-                font-size: 38px;
+                font-size: 3rem;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
@@ -34,7 +33,7 @@
             .about-desc{
                 color: var(--foundation-blue-new-blue-new-100, #B4BFD6);
                 font-family: Open Sans;
-                font-size: 16px;
+                font-size: 1rem;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 170%;

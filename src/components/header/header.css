@@ -11,7 +11,7 @@ input:-webkit-autofill,
         color: #FFF;
         text-align: center;
         font-family: Open Sans;
-        font-size: 15px;
+        font-size: 1.1rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -19,6 +19,16 @@ input:-webkit-autofill,
         &:hover{
             color: #FFB248;
         }
+    }
+}
+.header-btn{
+    font-size: 1.1rem;
+}
+.get-started-btn{
+    &:hover{
+        background: #FFB248;
+        border-color: #FFB248;
+        color: var(--foundation-dark-violet-dark-violet-500, #070719);
     }
 }
 .form-overlay{
@@ -73,5 +83,13 @@ input:-webkit-autofill,
             display: flex;
             justify-content: left;
         }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-mobile-btn {
+        margin-left: 0rem !important;
+        justify-content: center;
+        display: flex;
     }
 }

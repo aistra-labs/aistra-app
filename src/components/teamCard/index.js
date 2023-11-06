@@ -10,7 +10,7 @@ const TeamCard = ({ imageUrl, name, designation, linkedinUrl }) => {
         </div>
         <div className="card-content">
             <div className="content-body">
-                <h2 className="card-name">{name}</h2>
+                <div className="card-name">{name}</div>
                 <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="linkedin-link">
                     <img src={images['linkedin-logo.svg']} alt={name} className="linkedin-logo" />
                 </a>                

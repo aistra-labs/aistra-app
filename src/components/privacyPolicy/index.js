@@ -4,10 +4,11 @@ import "./privacyPolicy.css";
 function PrivacyPolicy() {
   return (
     <div className="privacy-container">
-      <h1 className="terms-title privacy-main-title">Privacy Policy for Aistra</h1>
+      <h1 className="terms-title privacy-main-title">
+        Privacy Policy for Aistra
+      </h1>
       <div>
         <h2 className="privacy-subHeading">Privacy Policy</h2>
-        <br />
         <p className="privacy-desc">Last updated: September 21st, 2023</p>
         <p className="privacy-desc">
           This Privacy Policy describes Our policies and procedures on the
@@ -21,7 +22,6 @@ function PrivacyPolicy() {
       </div>
       <div>
         <h2 className="privacy-subHeading">Interpretation and Definitions</h2>
-        <br />
         <h3 className="terms-title">Interpretation</h3>
         <p className="privacy-desc">
           The words of which the initial letter is capitalized have meanings
@@ -109,11 +109,11 @@ function PrivacyPolicy() {
         </ul>
       </div>
       <div>
-        <h2 className="privacy-subHeading">Collecting and Using Your Personal Data</h2>
+        <h2 className="privacy-subHeading">
+          Collecting and Using Your Personal Data
+        </h2>
         <h3 className="terms-title">Types of Data Collected</h3>
-        <br />
         <h3 className="terms-title">Personal Data</h3>
-        <br />
         <p className="privacy-desc">
           {" "}
           While using Our Service, We may ask You to provide Us with certain
@@ -126,9 +126,8 @@ function PrivacyPolicy() {
           <li className="privacy-pointers">First name and last name</li>
           <li className="privacy-pointers">Phone number</li>
         </ul>
-        <br />
         <h3 className="terms-title">Usage Data</h3>
-        <br />
+
         <p className="privacy-desc">
           {" "}
           Usage Data is collected automatically when using the Service. Usage
@@ -138,7 +137,7 @@ function PrivacyPolicy() {
           spent on those pages, unique device identifiers and other diagnostic
           data.{" "}
         </p>
-        <br />
+
         <p className="privacy-desc">
           When You access the Service by or through a mobile device, We may
           collect certain information automatically, including, but not limited
@@ -147,7 +146,7 @@ function PrivacyPolicy() {
           the type of mobile Internet browser You use, unique device identifiers
           and other diagnostic data.
         </p>
-        <br />
+
         <p className="privacy-desc">
           {" "}
           We may also collect information that Your browser sends whenever You
@@ -196,11 +195,8 @@ function PrivacyPolicy() {
         <ul>
           <li className="privacy-pointers">
             <strong>Necessary / Essential Cookies</strong>
-            <br />
             <strong>Type:</strong> Session Cookies
-            <br />
             <strong>Administered by:</strong> Us
-            <br />
             <strong>Purpose:</strong> These Cookies are essential to provide You
             with services available through the Website and to enable You to use
             some of its features. They help to authenticate users and prevent
@@ -210,21 +206,15 @@ function PrivacyPolicy() {
           </li>
           <li className="privacy-pointers">
             <strong>Cookies Policy / Notice Acceptance Cookies</strong>
-            <br />
             <strong>Type:</strong> Persistent Cookies
-            <br />
             <strong>Administered by:</strong> Us
-            <br />
             <strong>Purpose:</strong> These Cookies identify if users have
             accepted the use of cookies on the Website.
           </li>
           <li className="privacy-pointers">
             <strong>Functionality Cookies</strong>
-            <br />
             <strong>Type:</strong> Persistent Cookies
-            <br />
             <strong>Administered by:</strong> Us
-            <br />
             <strong>Purpose:</strong> These Cookies allow us to remember choices
             You make when You use the Website, such as remembering your login
             details or language preference. The purpose of these Cookies is to
@@ -240,7 +230,9 @@ function PrivacyPolicy() {
       </div>
       <div>
         <h2 className="privacy-subHeading">Use of Your Personal Data</h2>
-        <p className="privacy-desc">The Company may use Personal Data for the following purposes:</p>
+        <p className="privacy-desc">
+          The Company may use Personal Data for the following purposes:
+        </p>
         <ul>
           <li className="privacy-pointers">
             <strong>To provide and maintain our Service:</strong> including to
@@ -420,7 +412,9 @@ function PrivacyPolicy() {
         </p>
         <ul>
           <li className="privacy-pointers">Comply with a legal obligation</li>
-          <li className="privacy-pointers">Protect and defend the rights or property of the Company</li>
+          <li className="privacy-pointers">
+            Protect and defend the rights or property of the Company
+          </li>
           <li className="privacy-pointers">
             Prevent or investigate possible wrongdoing in connection with the
             Service
@@ -441,7 +435,7 @@ function PrivacyPolicy() {
           acceptable means to protect Your Personal Data, We cannot guarantee
           its absolute security.
         </p>
-        <br />
+
         <p className="privacy-desc">
           {" "}
           Our Service does not address anyone under the age of 13. We do not
@@ -452,7 +446,7 @@ function PrivacyPolicy() {
           under the age of 13 without verification of parental consent, We take
           steps to remove that information from Our servers.{" "}
         </p>
-        <br />
+
         <p className="privacy-desc">
           If We need to rely on consent as a legal basis for processing Your
           information and Your country requires consent from a parent, We may
@@ -497,7 +491,10 @@ function PrivacyPolicy() {
           us:
         </p>
         <p className="privacy-desc">
-          By email: <a className="email-style" href="mailto:info@aistra.com">info@aistra.com</a>
+          By email:{" "}
+          <a className="email-style" href="mailto:info@aistra.com">
+            info@aistra.com
+          </a>
         </p>
       </div>
     </div>

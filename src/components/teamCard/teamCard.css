@@ -17,6 +17,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 0.5rem;
             .card-name{
                 text-align: left;
                 color: var(--foundation-blue-new-blue-new-50, #E7EAF2);

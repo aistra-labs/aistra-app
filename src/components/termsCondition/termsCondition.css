@@ -18,6 +18,9 @@ body {
     margin-bottom: 2rem;
     margin-top: 3rem;
   }
+  .terms-desc{
+    color: var(--foundation-blue-new-blue-new-100, #b4bfd6);
+  }
   .terms-subHeading{
     font-family: Lato;
     color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
@@ -60,5 +63,11 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .privacy-container{
+    padding: 20px 24px;
   }
 }
