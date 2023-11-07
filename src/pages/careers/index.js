@@ -14,7 +14,7 @@ const Careers = ({ refs: ref }) => {
           <div className="careers-badge">Careers</div>
           <div className="careers-title">We're taking AI to the stars</div>
           <div className="careers-desc">
-            Aistra Labs is led by a team of Business Operations stalwarts, SaaS
+            Aistra Labs is led by a team of Business Operations Stalwarts, SaaS
             Builders, and Management Consultants from across the globe. We are
             on a mission to help businesses prepare for, adapt to, and adopt AI.
             We run an open and flat organization. We are remote first but meet
