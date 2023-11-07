@@ -16,7 +16,7 @@ const Home = () => {
           <div className="home-title">Making AI Work</div>
         </div>
         <div className="home-image-container">
-            <img className="home-img" src={images['top-banner-img-2.jpeg']} alt="Careers" />
+            <img className="home-img" src={images['top-banner-img.jpeg']} alt="Careers" />
         </div>
       </div>
     </section>

@@ -9,7 +9,6 @@
         justify-content: center;
         .about-image-container{
             width: 480px;
-            height: 640px;
             .about-image{
                 width: 100%;
                 height: 100%;
@@ -43,6 +42,11 @@
                 display: flex;
                 flex-direction: column;
                 row-gap: 30px;
+                .desc{
+                    .desc-bold{
+                        font-weight: 800;
+                    }
+                }
             }
             .about-btn-container{
                 width: 162px;
