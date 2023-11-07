@@ -14,7 +14,7 @@ const Team = () => {
         },
         {
             name: "Ambreesh Mahajan",
-            designation: "Co Founder and Partner",
+            designation: "Co-Founder and Partner",
             imageUrl: images['ambreesh-pic.png'],
             linkedinUrl: "https://www.linkedin.com/in/ambreesh-j-mahajan-28291886/"
         },
@@ -38,7 +38,7 @@ const Team = () => {
         },
         {
             name: "Eric Selvadurai",
-            designation: "Co founder and Managing Partner",
+            designation: "Co-Founder and Managing Partner",
             imageUrl: images['eric-pic.png'],
             linkedinUrl: "https://www.linkedin.com/in/eric-selvadurai-25601a2/"
         },
@@ -56,7 +56,7 @@ const Team = () => {
         },
         {
             name: "Kishore Mirchandani",
-            designation: "Co Founder and CFO",
+            designation: "Co-Founder and CFO",
             imageUrl: images['kishore-pic.png'],
             linkedinUrl: "https://www.linkedin.com/in/kishore-mirchandani-b9426247/"
         },
@@ -80,7 +80,7 @@ const Team = () => {
         },
         {
             name: "Neeraj Bhargava",
-            designation: "Co Founder and Managing Partner",
+            designation: "Co-Founder and Managing Partner",
             imageUrl: images['neeraj-pic.png'],
             linkedinUrl: "https://www.linkedin.com/in/neeraj-bhargava-a87474/"
         },
@@ -92,7 +92,7 @@ const Team = () => {
         },
         {
             name: "Sulakshana Patankar",
-            designation: "Co Founder and Partner",
+            designation: "Co-Founder and Partner",
             imageUrl: images['sulak-pic.png'],
             linkedinUrl: "https://www.linkedin.com/in/sulakshana-patankar/"
         },
