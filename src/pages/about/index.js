@@ -26,7 +26,7 @@ const About = () => {
     setNameValid(isValid);
   };
 
-  const PHONE_REGEX = /^[0-9]{10}$/;
+  const PHONE_REGEX = /^\+?(\d{1,3})?[-. ]?(\(\d{1,3}\)[-. ]?)?(\d{1,5}[-. ]?)?(\d{1,4}[-. ]?)?(\d{1,4})$/;
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;
@@ -205,7 +205,7 @@ const About = () => {
                                         value={phone}
                                         onChange={handlePhoneChange}
                                     />
-                                    {!phone.length && <div className="error-message">*Phone number is reuired</div>}
+                                    {!phone.length && <div className="error-message">*Phone number is required</div>}
                                     {(!isPhoneValid && phone.length > 0) && <div className="error-message">*Phone number is invalid</div>}
                                 </div>
                                 <div className="form-group form-field">
