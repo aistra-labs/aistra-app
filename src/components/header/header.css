@@ -1,95 +1,190 @@
 input:-webkit-autofill,
-      input:-webkit-autofill:hover,
-      input:-webkit-autofill:focus{
-        -webkit-text-fill-color: #fff;
-        -webkit-box-shadow: 0 0 0px 0px #000 inset;
-        transition: background-color 5000s ease-in-out 0s;
-      }
-.header-tabs{
-    column-gap: 16px;
-    .header-tab{
-        color: #FFF;
-        text-align: center;
-        font-family: Open Sans;
-        font-size: 1.1rem;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 0px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.header-tabs {
+  column-gap: 16px;
+  .header-tab {
+    color: #fff;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+    &:hover {
+      color: #ffb248;
+    }
+  }
+}
+.header-btn {
+  font-size: 1.1rem;
+}
+.get-started-btn {
+  &:hover {
+    background: #ffb248;
+    border-color: #ffb248;
+    color: var(--foundation-dark-violet-dark-violet-500, #070719);
+  }
+}
+.form-overlay {
+  position: relative;
+}
+.tooltip-arrow::before {
+  display: none;
+}
+.popover-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  .modal-content {
+    width: 540px;
+    padding: 40px;
+    border-radius: 2px;
+    border: 1px solid #161b26;
+    background: #0e1118;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.12);
+    .cross-btn-container{
+        width: 48px;
+        height: 48px;
+        position: absolute;
         cursor: pointer;
-        &:hover{
-            color: #FFB248;
+        top: 0px;
+        right: -64px;
+        .cross-btn-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
-}
-.header-btn{
-    font-size: 1.1rem;
-}
-.get-started-btn{
-    &:hover{
-        background: #FFB248;
-        border-color: #FFB248;
-        color: var(--foundation-dark-violet-dark-violet-500, #070719);
+    .form-header {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      .form-title {
+        color: #fff;
+        font-family: Lato;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .form-desc {
+        color: #fff;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
     }
+    .modal-body {
+      padding: 0px;
+      margin-top: 48px;
+      .thank-you-text{
+        color: #fff;
+        font-family: Lato;
+        font-size: 28px;
+      }
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        .form-field {
+          display: flex;
+          flex-direction: column;
+          .form-label {
+            color: var(--foundation-blue-new-blue-new-100, #b4bfd6);
+            font-family: Open Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+          .form-field-input {
+            width: 460px;
+            height: 56px;
+            padding: 0 20px;
+            border-radius: 2px;
+            border: 1px solid #1f283a;
+            background: #161b26;
+            color: var(--foundation-blue-new-blue-new-100, #b4bfd6) !important;
+            font-family: Open Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            &:focus {
+              border: 1px solid #1f283a;
+              outline: none;
+            }
+            &::placeholder {
+                color: #2A354B;
+            }
+          }
+          .form-text-area{
+            padding-top: 16px;
+            height: 120px;
+          }
+          .error-message {
+            color: var(--foundation-blue-new-blue-new-100, #b4bfd6);
+            font-family: Open Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+      }
+    }
+    .form-footer {
+      display: flex;
+      margin-top: 32px;
+      .form-submit-btn {
+        width: 102px;
+        height: 46px;
+        border-radius: 2px;
+        background: #0035ae;
+        border: none;
+      }
+    }
+  }
 }
-.form-overlay{
-    position: relative;
-}
-.tooltip-arrow::before{
-    display: none;
-}
-.popover-container{
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-.modal-dialog{
-    display: flex;
+
+@media only screen and (max-width: 767px) {
+  .footer-mobile-btn {
+    margin-left: 0rem !important;
     justify-content: center;
-    .modal-content{
+    display: flex;
+  }
+  .modal-dialog {
+    .modal-content {
         width: 340px;
-        border: 1px solid #161B26;
-        background: #0E1118;
-        color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
-        .modal-body{
-            .form-container{
-                display: flex;
-                flex-direction: column;
-                row-gap: 10px;
+        .cross-btn-container{
+            right: 0px;
+        }
+        .modal-body {
+            .form-container {
                 .form-field{
-                    display: flex;
-                    flex-direction: column;
                     .form-field-input{
-                        background: none;
-                        border: 1px solid grey;
-                        color: var(--foundation-blue-new-blue-new-50, #E7EAF2);
-                        &:focus{
-                            border: solid 1px grey;
-                            outline: none;
-                        }
+                        width: auto;
+                        height: 48px;
                     }
-                    .error-message{
-                        color: var(--foundation-blue-new-blue-new-100, #B4BFD6);
-                        font-family: Open Sans;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 180%;
+                    .form-text-area{
+                        padding-top: 12px;
+                        height: 80px;
                     }
                 }
             }
         }
-        .modal-footer{
-            border-top: none;
-            display: flex;
-            justify-content: left;
-        }
     }
-}
-
-@media only screen and (max-width: 767px) {
-    .footer-mobile-btn {
-        margin-left: 0rem !important;
-        justify-content: center;
-        display: flex;
-    }
+  }
 }

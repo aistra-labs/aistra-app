@@ -30,7 +30,8 @@ const Footer = (props) => {
     setNameValid(isValid);
   };
 
-  const PHONE_REGEX = /^\+?(\d{1,3})?[-. ]?(\(\d{1,3}\)[-. ]?)?(\d{1,5}[-. ]?)?(\d{1,4}[-. ]?)?(\d{1,4})$/;
+  const PHONE_REGEX =
+    /^\+?(\d{1,3})?[-. ]?(\(\d{1,3}\)[-. ]?)?(\d{1,5}[-. ]?)?(\d{1,4}[-. ]?)?(\d{1,4})$/;
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;
@@ -207,14 +208,24 @@ const Footer = (props) => {
                 Get in touch
               </div>
               <Modal show={show} onHide={handleClose}>
-                <Modal.Header>
-                  <Modal.Title>Contact Us</Modal.Title>
-                </Modal.Header>
+                <div className="cross-btn-container" onClick={handleClose}>
+                  <img
+                    className="cross-btn-img"
+                    src={images["cross-btn.svg"]}
+                    alt="Close button"
+                  />
+                </div>
+                <div className="form-header">
+                  <div className="form-title">Get In Touch</div>
+                  <div className="form-desc">We'd love to hear from you</div>
+                </div>
                 <Modal.Body>
                   {!apiData ? (
                     <form className="form-container">
                       <div className="form-group form-field">
-                        <label htmlFor="name">Name</label>
+                        <label className="form-label" htmlFor="name">
+                          Name*
+                        </label>
                         <input
                           type="text"
                           className="form-field-input"
@@ -228,7 +239,9 @@ const Footer = (props) => {
                         )}
                       </div>
                       <div className="form-group form-field">
-                        <label htmlFor="phone">Phone</label>
+                        <label className="form-label" htmlFor="phone">
+                          Phone*
+                        </label>
                         <input
                           type="tel"
                           id="phone"
@@ -249,7 +262,9 @@ const Footer = (props) => {
                         )}
                       </div>
                       <div className="form-group form-field">
-                        <label htmlFor="email">Email</label>
+                        <label className="form-label" htmlFor="email">
+                          Email*
+                        </label>
                         <input
                           type="email"
                           id="email"
@@ -268,11 +283,13 @@ const Footer = (props) => {
                         )}
                       </div>
                       <div className="form-group form-field">
-                        <label htmlFor="message">How can we help you?</label>
+                        <label className="form-label" htmlFor="message">
+                          How can we help you?*
+                        </label>
                         <textarea
                           id="message"
-                          className="form-field-input"
-                          placeholder=""
+                          className="form-field-input form-text-area"
+                          placeholder="Enter Message"
                           rows="4"
                           value={message}
                           onChange={handleMessageChange}
@@ -285,21 +302,21 @@ const Footer = (props) => {
                       </div>
                     </form>
                   ) : (
-                    <div>Thank You</div>
+                    <div className="thank-you-text">Thank You</div>
                   )}
                 </Modal.Body>
-                <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
-                    Close
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    onClick={handleSendClick}
-                    disabled={!isFormValid}
-                  >
-                    Send
-                  </Button>
-                </Modal.Footer>
+                <div className="form-footer">
+                  {!apiData && (
+                    <Button
+                      variant="primary"
+                      className="form-submit-btn"
+                      onClick={handleSendClick}
+                      disabled={!isFormValid}
+                    >
+                      Submit
+                    </Button>
+                  )}
+                </div>
               </Modal>
             </div>
           </div>
