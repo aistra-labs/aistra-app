@@ -233,7 +233,7 @@ const Header = (props) => {
                 </div>
                 <div className="form-header">
                   <div className="form-title">Get In Touch</div>
-                  <div className="form-desc">We'd love to hear from you</div>
+                  <div className="form-desc">We'd love to hear from you </div>
                 </div>
                 <Modal.Body>
                   {!apiData ? (
