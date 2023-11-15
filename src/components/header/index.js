@@ -62,103 +62,32 @@ const Header = (props) => {
     setMessageValid(isValid);
   };
 
-  let myHeaders = new Headers();
-  myHeaders.append(
-    "authority",
-    "contact.apps-api.instantpage.secureserver.net"
-  );
-  myHeaders.append("accept", "*/*");
-  myHeaders.append("accept-language", "en-US,en;q=0.9,hi;q=0.8");
-  myHeaders.append("content-type", "application/json; charset=UTF-8");
-  myHeaders.append("dnt", "1");
-  myHeaders.append("origin", "https://aistra.com");
-  myHeaders.append("referer", "https://aistra.com/");
-  myHeaders.append(
-    "sec-ch-ua",
-    '"Not/A)Brand";v="99", "Google Chrome";v="115", "Chromium";v="115"'
-  );
-  myHeaders.append("sec-ch-ua-mobile", "?0");
-  myHeaders.append("sec-ch-ua-platform", '"macOS"');
-  myHeaders.append("sec-fetch-dest", "empty");
-  myHeaders.append("sec-fetch-mode", "cors");
-  myHeaders.append("sec-fetch-site", "cross-site");
-  myHeaders.append(
-    "user-agent",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
-  );
-
-  const raw = (data) => ({
-    websiteId: "a2ef901d-2eff-440f-85c0-23e918f54b7d",
-    widgetId: "ca116b4c-53f1-4c5f-96e9-32b7974d6f30",
-    pageId: "00000000-0000-0000-0000-000000000000",
-    accountId: "7cb1ae1f-3127-11ee-8334-3417ebe73f23",
-    domainName: "aistra.com",
-    optedToSubscribe: false,
-    locale: "en-IN",
-    metadata: {
-      formIdentifier: "MESSAGING_EMAIL",
-      pathName: "/",
-      deviceType: "desktop",
-      deviceOs: "macOS",
-      browserName: "Chrome",
-    },
-    formData: [
-      {
-        label: "Name",
-        value: data.name,
-        keyName: "name",
-      },
-      {
-        label: "Email",
-        value: data.email,
-        replyTo: true,
-        keyName: "email",
-      },
-      {
-        label: "How can we help?",
-        value: data.help,
-        keyName: "message",
-      },
-      {
-        label: "phone",
-        value: data.phone,
-        keyName: "phone",
-      },
-      {
-        label: "_app_id",
-        value: "",
-      },
-    ],
-    recaptchaToken:
-      "03AFcWeA6GUslX-k4wWm-TYLeg2kgRXrXcZQICFU2Sp04VYvOd6QMwRcMYJLvHWL9pB8B9aCkkrADjHf8iM4dHgrM8_bwToSuZ-HalP-3TnKxkHciZ3Xk56j_CnPH65z_1P8jZyd9cWOCKOC2W6JtIpMW7GRecNxGLv9PO5VzsPiizCDgTF0SFD_mi2vShPbo3g4IisYEDTvpqHAGentnxInSGt-3oqlzkKH8uFOAXRJkrh8VQOoniRCPomzwmFoSwgVAJbQ58rxQIPe0gZZOOm7W29xc0cSdjG7S5WOJDQbqoCZ8g-qWMz_Lrwc6C40Oc5II13it46xp0Uk7Ib9ZQ1tYSH7JN_N6JiDPY_UsEPMUwS_vjmtGaqPUSmNCDGt1siHWRoZdb0FwvWMis1XHOiTxP4d4Xy6iUAo4rc2bQUWDHWe8X-fehGR-3dPfYs5GugFoLmr_tTBltb482dp4uRlibggoYzQWcK4qJfiUkoM5kBlUBdxNQhr-n8j3dZhlgZzgUebEhi6Q1xikAOkgV6Yw2XrpB9-aOBDl2JHNPUQeLxGlvDJ3FsbOfxL6t73poyyHrc3aug8QqC8tzR7n2oXvAV3uRQWhGwg",
-    isReseller: false,
-  });
-
-  const requestOptions = (data) => ({
+  const requestOptions = (requestBody) => ({
     method: "POST",
-    headers: myHeaders,
-    body: JSON.stringify(raw(data)),
-    redirect: "follow",
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(requestBody),
   });
 
   const handleSendClick = () => {
     const apiUrl =
-      "https://contact.apps-api.instantpage.secureserver.net/messaging";
-    const rawData = {
+      "http://51.112.12.168:8090/contact-us";
+    const requestBody = {
       name: name,
       phone: phone,
       email: email,
-      help: message,
+      message: message,
     };
     async function fetchData() {
       try {
-        const response = await fetch(apiUrl, requestOptions(rawData));
+        const response = await fetch(apiUrl, requestOptions(requestBody));
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        const jsonData = await response.json();
-        setApiData(jsonData);
-        console.log("result...", jsonData);
+        // const jsonData = await response.json();
+        setApiData('success');
+        console.log("Success...");
       } catch (err) {}
     }
     fetchData();
