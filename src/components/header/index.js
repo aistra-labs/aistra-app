@@ -71,8 +71,7 @@ const Header = (props) => {
   });
 
   const handleSendClick = () => {
-    const apiUrl =
-      "http://51.112.12.168:8090/contact-us";
+    const apiUrl = "http://3.29.218.31:8090/contact-us";
     const requestBody = {
       name: name,
       phone: phone,
