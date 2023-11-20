@@ -71,7 +71,7 @@ const Header = (props) => {
   });
 
   const handleSendClick = () => {
-    const apiUrl = "http://3.29.218.31:8090/contact-us";
+    const apiUrl = "https://api.aistra.com/contact-us";
     const requestBody = {
       name: name,
       phone: phone,
